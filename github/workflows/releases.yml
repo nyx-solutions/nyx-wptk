@@ -1,0 +1,32 @@
+name: Releases
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Create the Release Archive
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: "nyx-wptk.zip"
+          exclusions: "*.git* .editorconfig CHANGELOG.md README.md"
+      - name: Get current Release Version
+        uses: frabert/replace-string-action@master
+        id: version
+        with:
+          pattern: 'refs\/tags\/v'
+          string: "${{ github.ref }}"
+          replace-with: ''
+          flags: 'g'
+      - name: Upload the Release Archive
+        uses: ncipollo/release-action@v1
+        with:
+          name: "NYX WordPress Toolkit ${{ steps.version.outputs.replaced }}"
+          artifacts: "nyx-wptk.zip"
+          bodyFile: "CHANGELOG.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
