@@ -258,7 +258,7 @@ Para habilitar a funcionalidade de **avatares padrões**, utilize o filtro abaix
 ```php
 
 add_filter(
-    'nyx_wptk_login_logo',
+    'nyx_wptk_login_user_avatars',
     static fn () => [
         'enabled'    => true,
         'default'    => 'https://url.com/image.png', // Imagem padrão.

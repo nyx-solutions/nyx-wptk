@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 1.0.5 / 18/06/2021
+
+#### Fix
+
+- Correções na implementação dos avatares.
+
 ### 1.0.4 / 18/06/2021
 
 #### Fix

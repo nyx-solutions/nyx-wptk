@@ -1,7 +1,7 @@
 <?php
 
     $configurations     = ['enabled' => false, 'image' => null, 'height' => null];
-    $userConfigurations = apply_filters('nyx_wptk_login_logo', null);
+    $userConfigurations = apply_filters('nyx_wptk_login_user_avatars', null);
 
     if (is_array($userConfigurations) && isset($userConfigurations['enabled'], $userConfigurations['default'], $userConfigurations['devDefault'])) {
         $userConfigurations['enabled'] = (bool)$userConfigurations['enabled'];
