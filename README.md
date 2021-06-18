@@ -234,6 +234,40 @@ add_filter(
 
 ```
 
+### Logo no Login
+
+Para habilitar a funcionalidade de **logo no login**, utilize o filtro abaixo:
+
+```php
+
+add_filter(
+    'nyx_wptk_login_logo',
+    static fn () => [
+        'enabled' => true,
+        'image'   => 'https://url.com/image.png',
+        'height'  => '175px',
+    ]
+);
+
+```
+
+### Avatares
+
+Para habilitar a funcionalidade de **avatares padrões**, utilize o filtro abaixo:
+
+```php
+
+add_filter(
+    'nyx_wptk_login_logo',
+    static fn () => [
+        'enabled'    => true,
+        'default'    => 'https://url.com/image.png', // Imagem padrão.
+        'devDefault' => 'https://url.com/image.png', // Imagem padrão exclusiva para desenvolvimento.
+    ]
+);
+
+```
+
 ### Server Report
 
 Para habilitar a funcionalidade de **server report**, utilize o filtro abaixo:
