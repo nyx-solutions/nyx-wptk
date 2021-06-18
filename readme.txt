@@ -11,8 +11,3 @@ Common helpers for WordPress themes.
 
 == Description ==
 Common helpers for WordPress themes.
-
-== Changelog ==
-= 1.0.0 =
-
-  * Initial release
