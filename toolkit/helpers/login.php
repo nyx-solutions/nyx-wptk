@@ -2,7 +2,7 @@
 
     #region Login Verifications
 
-    if (nyx_wptk_is_function_enabled('is_login')) {
+    if (!function_exists('is_login')) {
         /**
          * @return bool
          */

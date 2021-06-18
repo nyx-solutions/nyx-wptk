@@ -90,12 +90,12 @@
             $nyx->applyDefaultBehavior();
 
             $functionalities = [
+                'helpers'        => ['main', 'url', 'login', 'content', 'template', 'formatters', 'images', 'google-maps', 'taxonomies', 'videos', 'date-time', 'php8'],
                 'acf'            => ['settings'],
                 'cache'          => ['main'],
                 'cron'           => ['main'],
                 'dashboard'      => ['admin'],
                 'google-maps'    => ['main'],
-                'helpers'        => ['main', 'url', 'login', 'content', 'template', 'formatters', 'images', 'google-maps', 'taxonomies', 'videos', 'date-time', 'php8'],
                 'login'          => ['main'],
                 'login-required' => ['main'],
                 'mail'           => ['main'],

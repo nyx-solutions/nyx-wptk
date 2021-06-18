@@ -2,6 +2,19 @@
 
 ## Changelog
 
+### 1.0.4 / 18/06/2021
+
+#### Fix
+
+- Melhorias gerais no carregamento.
+- Correção na ordem de carregamento e de verificação de funções.
+
+### 1.0.3 / 18/06/2021
+
+#### Fix
+
+- Correção de versão.
+
 ### 1.0.2 / 18/06/2021
 
 #### Changed

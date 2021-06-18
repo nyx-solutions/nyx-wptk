@@ -4,11 +4,15 @@
      * @param string $name
      *
      * @return bool
-     *
-     * @todo Aplicar método mais eficiente para verificar as funções habilitadas
      */
     function nyx_wptk_is_function_enabled(string $name): bool
     {
+        static $verified = [];
+
+        if (array_key_exists($name, $verified)) {
+            return $verified[$name];
+        }
+
         $functions = nyx_wptk_available_functions();
         $enabled   = apply_filters('nyx_wptk_enabled_functions', $functions, $functions);
 
@@ -16,7 +20,11 @@
             $enabled = [];
         }
 
-        return (in_array($name, $enabled, true) && function_exists($name));
+        $isFunctionEnabled = (in_array($name, $enabled, true) && !function_exists($name));
+
+        $verified[$name] = $isFunctionEnabled;
+
+        return $isFunctionEnabled;
     }
 
     /**
@@ -33,7 +41,6 @@
             'get_scripts_url',
             'get_styles_url',
             'get_svg_url',
-            'is_login',
             'get_as_content',
             'get_as_description',
             'get_parsed_keywords',
