@@ -2,6 +2,13 @@
 
 ## Changelog
 
+### 1.0.6 / 01/09/2022
+
+#### Changed
+
+- Adicionado filtro para determinar se o editor (de páginas) deve ser desabilitado. Por padrão, para manter a 
+  compatibilidade, o editor é desabilitado.
+
 ### 1.0.5 / 18/06/2021
 
 #### Fix

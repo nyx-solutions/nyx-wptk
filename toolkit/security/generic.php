@@ -9,7 +9,11 @@
     add_action(
         'admin_init',
         static function () {
-            remove_post_type_support('page', 'editor');
+            $pageEditorEnabled = (bool)apply_filters('nyx_wptk_page_editor_enabled', false);
+
+            if (!$pageEditorEnabled) {
+                remove_post_type_support('page', 'editor');
+            }
         }
     );
 
