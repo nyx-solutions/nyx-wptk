@@ -36,7 +36,7 @@
          */
         function get_template_url(string $path, string $prefix = ''): string
         {
-            $template_url = get_template_directory_uri();
+            $template_url = get_stylesheet_directory_uri();
 
             if (!empty($prefix) && $prefix[0] !== '/') {
                 $prefix = "/{$prefix}";

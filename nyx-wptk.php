@@ -8,7 +8,7 @@
      * Author URI:  https://github.com/nyx-solutions
      * License:     GNU General Public License v2 or later
      * License URI: http://www.gnu.org/licenses/gpl-2.0.html
-     * Version:     1.0.6
+     * Version:     1.0.7
      */
 
     use nyx\NyxWordPressToolkit;

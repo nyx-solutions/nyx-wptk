@@ -2,6 +2,13 @@
 
 ## Changelog
 
+### 1.0.7 / 11/06/2023
+
+#### Changed
+
+- Alterado na função `get_template_url` para usar a função `get_stylesheet_directory_uri` ao invés da função
+  `get_template_directory_uri`, de forma a capturar a URL correta em temas filhos.
+
 ### 1.0.6 / 01/09/2022
 
 #### Changed
